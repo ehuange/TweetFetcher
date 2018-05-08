@@ -23,4 +23,18 @@ const tweetSchema = mongoose.Schema({
 
 const tweet = mongoose.model('Tweet', tweetSchema);
 
-module.exports = db, tweet;
+const saveTweets = (array, callback) => {
+  const tweets = array.map(tweet => {
+    return {
+      created_at: tweet.created_at,
+      text: tweet.text,
+      url: tweet.url,
+      user: tweet.user.screen_name,
+      profile_img: tweet.user.profile_image_url,
+      favorite_count: tweet.favorite_count,
+      retweet_count: tweet.retweet_count,
+    }
+  })
+}
+
+module.exports = { db, tweet }

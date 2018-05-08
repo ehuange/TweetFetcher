@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Home from './components/Home.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello from index.jsx
+        <Home />
       </div>
     )
   }
