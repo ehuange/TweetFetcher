@@ -21,7 +21,7 @@ export default class Home extends Component {
   async fetchTweets() {
     try {
       const { handle } = this.state;
-      const tweets = await axios.post(`http://localhost:3000/twitter/getTweetsForUser`, {username: handle})
+      const tweets = await axios.post(`https://calm-falls-68223.herokuapp.com/twitter/getTweetsForUser`, {username: handle})
       const { data } = tweets;
       await this.setState({
         tweets: data,
