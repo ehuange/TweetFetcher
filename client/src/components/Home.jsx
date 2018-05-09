@@ -27,7 +27,6 @@ export default class Home extends Component {
         tweets: data,
         handle: '',
       })
-      console.log(this.state.tweets);
     } catch (error) {
       console.log('Error with fetchTweets', error);
       return;
