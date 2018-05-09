@@ -3,7 +3,8 @@ const bp = require('body-parser');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
-const { db } = require('./db');
+//UNCOMMENT THIS LINE FOR DB IMPLEMENTATION
+// const { db } = require('./db'); 
 const router = require('./routes/index.js');
 const cors = require('cors');
 const helmet = require('helmet');

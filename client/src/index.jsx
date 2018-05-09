@@ -13,6 +13,8 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1 className="title"> Tweet Fetcher </h1>
+        <h2 className="description"> Simply enter a public twitter handle to get their 25 most recent tweets (real-time)</h2>
         <Home />
       </div>
     )
