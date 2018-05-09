@@ -46,9 +46,9 @@ export default class Home extends Component {
         onChange={this.grabTwitterHandle}
         />
         <button onClick={this.fetchTweets}> Submit </button>
-        {this.state.tweets.length > 0 ? this.state.tweets.map(tweet => {
+        {this.state.tweets.length > 0 ? this.state.tweets.map((tweet, i) => {
           return (
-            <div className="tweet"> <img src={tweet.user.profile_image_url}/> <a href={tweet.user.url} target="_blank"> @{tweet.user.screen_name} </a>  : {tweet.text} tweeted at {tweet.created_at}  </div> 
+            <div key={i} className="tweet"> <img src={tweet.user.profile_image_url}/> <a href={tweet.user.url} target="_blank"> @{tweet.user.screen_name} </a>  : {tweet.text} tweeted at {tweet.created_at}  </div> 
           )
         }) : null
         }
